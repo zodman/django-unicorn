@@ -7,6 +7,8 @@
         <br />
         dictionary.name: {{ dictionary.name }}<br />
         dictionary.nested.name: {{ dictionary.nested.name }}<br />
+        <button unicorn:click='set_dictionary({"name": 1, "nested": {"name": 2}})'>set dictionary(1)</button>
+        <button unicorn:click='dictionary.nested.name=2'>set dictionary(2)</button>
     </div>
 
     <div>
@@ -40,5 +42,8 @@
             <li>Book in queryset: {{ b.title }}</li>
             {% endfor %}
         </ul>
-    </div>    
+    </div>
+
+    <button unicorn:click="reset">reset</button>
+    <button unicorn:click="refresh">refresh</button>
 </div>
